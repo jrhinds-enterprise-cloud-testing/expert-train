@@ -32,12 +32,15 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm ci
+
     - name: Build
-    - run: npm run build --if-present
+      run: npm run build --if-present
+
     - name: Start
-    - run: npm start
+      run: npm start
+
     - name: Publish
-    - run: npm publish
-    - env:
-      NODE_AUTH_TOKEN: ${{ secrets.GUTHUB.TOKEN }}
+      run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GUTHUB.TOKEN }}
     
