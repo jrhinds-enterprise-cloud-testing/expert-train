@@ -31,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://npm.pkg.github.com'
         scope: '@jrhinds-enterprise-cloud-testing'
-        cache: 'npm'
+        
     - run: npm install
     - run: npm ci
 
