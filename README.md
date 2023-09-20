@@ -1,3 +1,3 @@
-# expert-train
+# Hello World
 
-Text goes here.
+Simple node app that says hi!
