@@ -1,0 +1,28 @@
+name: Sandbox_Runner_LBass
+on:
+  workflow_dispatch:
+    inputs:
+      SLEEP_TIMER:
+        description: Sleep time ?
+        default: "120"
+
+env:
+  P_SLEEP_TIMER:  ${{ inputs.SLEEP_TIMER }}
+  ACTIONS_RUNNER_DEBUG: 'true'
+  ACTIONS_STEP_DEBUG: 'true' 
+
+jobs:
+  SandboxTest_v1:
+    runs-on: self-hosted
+    name: Deploy
+
+    steps:
+      - name: Step1 - Deploy File
+        id: Step1-DeployFile
+        shell: bash
+        run: |
+          echo "Executing Script"
+          echo "====Sleep====="
+          echo "Time#     : "$P_SLEEP_TIMER
+          sleep $P_SLEEP_TIMER
+          echo "Job completed successfully.."
