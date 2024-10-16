@@ -13,3 +13,5 @@ updates:
     directory: "/" # Location of the Package.swift file
     schedule:
       interval: "daily"
+
+
