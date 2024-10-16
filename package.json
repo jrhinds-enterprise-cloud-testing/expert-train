@@ -11,9 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-}
-"dependencies": {
+  "dependencies": {
   "@babel/runtime": "^7.12.5",
   "@testing-library/dom": "^8.5.0",
   "@types/react-dom": "*"
 }
+}
+
