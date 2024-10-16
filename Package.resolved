@@ -1,14 +1,14 @@
 {
   "object": {
     "pins": [
-      {
-        "package": "ExamplePackage",
-        "repositoryURL": "https://github.com/example/ExamplePackage.git",
-        "state": {
-          "branch": null,
-          "revision": "5f8d8396c87d1e6a3f5a5b5c3db847769f8dcf8b",
-          "version": "1.0.0"
-        }
+    {
+      "identity" : "collectionconcurrencykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/CollectionConcurrencyKit.git",
+      "state" : {
+        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+        "version" : "0.2.0"
+      }
       }
     ]
   },
