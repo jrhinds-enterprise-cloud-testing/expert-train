@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     # Different concurrency group from slow-job-1
     concurrency:
-      group: slow-job-2-${{ github.ref != 'refs/heads/master' && github.head_ref || github.sha }}
+      group: slow-job-1-${{ github.ref != 'refs/heads/master' && github.head_ref || github.sha }}
       cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
     steps:
       - name: Run slow task 2
