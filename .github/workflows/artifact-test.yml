@@ -1,0 +1,28 @@
+name: Generate and Upload Artifact
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Create artifact content
+        run: |
+          mkdir -p artifact-directory
+          echo "This is a sample artifact file created at $(date)" > artifact-directory/sample-file.txt
+          echo "Hello, ${{ github.actor }}!" >> artifact-directory/sample-file.txt
+          echo "Repository: ${{ github.repository }}" >> artifact-directory/sample-file.txt
+          
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: artifact-directory/
+          retention-days: 5
